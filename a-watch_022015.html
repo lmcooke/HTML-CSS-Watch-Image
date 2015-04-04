@@ -1,0 +1,403 @@
+<html>
+	<head>
+		<title>A Watch</title>
+		<style>
+			body {	
+				background: #ffcccc;
+			}
+			.bigellipse {
+				height: 300px;
+				width: 225px;
+				
+				position: absolute;
+				left: 200px;
+				top: 150px;
+				border-radius: 50%;
+			}
+			
+			.bigellipse2 {
+				left: 270px;
+				background: #995c5c;
+				border-radius: 45%;
+			}
+			
+			.bigellipse3 {	
+				height: 298px;
+				width: 130px;
+				background: #804c4c;
+				
+				left: 340px;
+				top: 151px;
+				z-index: 2;
+			}
+			
+			.bigellipse4 {
+				left: 297px;
+				z-index: -2;
+				background: #663d3d;
+			}
+			
+			.bigellipse5 {
+				height: 292px;
+				width: 130px;
+				
+				top: 155px;
+				left: 370px;
+				background: #663d3d;
+				border-radius: 47%;
+			}
+			
+			.smallellipse {
+				height: 140px;
+				width: 50px;
+				background: #663d3d;
+				
+				left: 474px;
+				top: 233px;
+			}
+			
+			.smallellipse2 {
+				height: 298px;
+				width: 124px;
+				background: #ffcccc;
+				
+				left: 346px;
+				top: 151px;
+				z-index: 3;
+			}
+			
+			/* Border of watch face takes two ellipses
+				for perspective */
+			.face {
+				height: 160px;
+				width: 140px;
+				background: #ffa3a3;
+				
+				position: absolute;
+				top: 214px;
+				left: 234px;
+				border-radius: 48%;
+				z-index: 4;
+			}
+			
+			.face2 {
+				left: 242px;
+				top: 222px;
+			}
+			
+			
+			.smallface {
+				height: 155px;
+				width: 135px;
+				background: #ffebeb;
+				
+				position: absolute;
+				top: 217px;
+				left: 237px;
+				border-radius: 49%;
+				z-index: 5;
+			}
+			
+			.smallface2 {
+				top: 224px;
+				left: 244px;
+				
+			}
+			
+			.number {
+				height: 6px;
+				width: 6px;
+				background: #4c2e2e;
+				
+				position: absolute;
+				border-radius: 50%;
+				z-index: 6;
+			}
+			
+			.twelve {
+				top: 233px;
+				left: 305px;
+			}
+			
+			.one {
+				top: 247px;
+				left: 337px;
+			}
+			
+			.two {
+				top: 275px;
+				left: 356px;
+			}
+			
+			.three {
+				top: 307px;
+				left: 358px;
+			}
+			
+			.four {
+				top: 333px;
+				left: 350px;
+			}
+			
+			.five {
+				top: 352px;
+				left: 328px;
+			}
+			
+			.six {
+				top: 357px;
+				left: 302px;
+			}
+			
+			.seven {
+				top: 345px;
+				left: 275px;
+			}
+			
+			.eight {
+				top: 319px;
+				left: 255px;
+			}
+			
+			.nine {
+				top: 288px;
+				left: 250px;
+			}
+			
+			.ten {
+				top: 260px;
+				left: 257px;
+			}
+			
+			.eleven {
+				top: 240px;
+				left: 276px;
+			}
+			
+			.hand {
+				width: 4px;
+				background: #804c4c;
+				
+				position: relative;
+				border-radius: 2px;
+				z-index: 6;
+			}
+			
+			.minutehand {
+				height: 50px;
+				top: 291px;
+				left: 291px;
+				-webkit-transform: rotate(357deg);
+			}
+
+			
+			.hourhand {
+				height: 37px;
+				top: 212px;
+				left: 301px;
+				-webkit-transform: rotate(40deg);
+			}
+			
+			.sidenub {
+				height: 15px;
+				width: 15px;
+				background: #b26b6b;
+				
+				position: absolute;
+				top: 280px;
+				left: 225px;
+				border-radius: 3px;
+				-webkit-transform: rotate(6deg);
+			}
+			
+			.sidenubpiece {
+				height: 18px;
+				width: 3px;
+				background: #804c4c;
+				
+				position: absolute;
+				top: 278px;
+				left: 225px;
+				border-radius: 2px;
+				-webkit-transform: rotate(6deg);
+			}
+			
+			.hbar {
+				height: 8px;
+				width: 85px;
+				background: #e68a8a;
+				
+				position: absolute;
+				border-radius: 5px;
+				z-index: 5;
+			}
+			
+			.top {
+				top: 203px;
+				left: 282px;
+				-webkit-transform: rotate(12deg);
+			}
+			.bottom {
+				top: 385px;
+				left: 281px;
+				-webkit-transform: rotate(352deg);
+			}
+			
+			.vbar {
+				height: 40px;
+				width: 4px;
+				background: #e68a8a;
+				
+				position: absolute;
+			}
+			
+			.tl {
+				top: 200px;
+				left: 276px;
+				-webkit-transform: rotate(18deg);
+			}
+			
+			.tr {
+				height: 26px;
+				top: 215px;
+				left: 360px;
+				-webkit-transform: rotate(15deg);
+				z-index: 4;
+			}
+			
+			.bl {
+				top: 357px;
+				left: 275px;
+				-webkit-transform: rotate(343deg);
+
+			}
+			
+			.br {	
+				height: 21px;
+				top: 364px;
+				left: 359px;
+				-webkit-transform: rotate(344deg);
+				z-index: 4;
+			}
+			
+			.buckle {
+				height: 20px;
+				width: 70px;
+				background: #b26b6b;
+				
+				position: absolute;
+				top: 300px;
+				left: 460px;
+				border-radius: 50px;
+				z-index: 5;
+				-webkit-transform: rotate(15deg);
+			}
+			
+			.pin {
+				height: 15px;
+				width: 4px;
+				background: #e68a8a;
+				
+				position: absolute;
+				top: 295px;
+				left: 490px;
+				border-radius: 4px;
+				z-index: 5;
+				-webkit-transform: rotate(5deg);
+			}
+			
+			.strap1 {
+				height: 30px;
+				width: 65px;
+				background: #804c4c;
+				
+				position: absolute;
+				top: 340px;
+				left: 458px;
+				border-radius: 7px;
+				z-index: 5;
+				-webkit-transform: rotate(13deg);
+			}
+			
+			.hole {
+				height: 6px;
+				width: 6px;
+				background: #ffd6d6;
+				
+				position: absolute;
+				border-radius: 50%;
+				z-index: 5;
+			}
+			
+			.hole1 {
+				top: 270px;
+				left: 490px;
+			}
+			
+			.hole2 {
+				top: 250px;
+				left: 487px;
+			}
+			.hole3 {
+				top: 230px;
+				left: 484px;
+			}
+			
+			.hole4 {
+				top: 212px;
+				left: 479px;
+			}
+			
+
+			
+		</style>
+	</head>
+	<body>
+		<div class="bigellipse bigellipse2"></div>
+		<div class="bigellipse bigellipse3"></div> 
+		<div class="bigellipse bigellipse2 bigellipse4"></div>
+		<div class="bigellipse bigellipse5"></div>
+		<div class="bigellipse smallellipse"></div>
+		<div class="bigellipse smallellipse2"></div>
+		<div class="face"></div>
+		<div class="face face2"></div>
+		<div class="face face3"></div>
+		<div class="smallface"></div>
+		<div class="smallface smallface2"></div>
+		<div class="number twelve"></div>
+		<div class="number one"></div>
+		<div class="number two"></div> 
+		<div class="number three"></div>
+		<div class="number four"></div>
+		<div class="number five"></div> 
+		<div class="number six"></div>
+		<div class="number seven"></div>
+		<div class="number eight"></div>
+		<div class="number nine"></div>
+		<div class="number ten"></div>
+		<div class="number eleven"></div>
+		<div class="hand minutehand"></div>
+		<div class="hand hourhand"></div>
+		<div class="sidenub"></div>
+		<div class="sidenubpiece"></div>
+		
+		<div class="top hbar"></div>
+		<div class="bottom hbar"></div>
+		<div class="tl vbar"></div>
+		<div class="tr vbar"></div>
+		<div class="bl vbar"></div>
+		<div class="br vbar"></div>
+		
+		<div class="buckle"></div>
+		<div class="pin"></div>
+		<div class="strap1"></div>
+		
+		<div class="hole hole1"></div>
+		<div class="hole hole2"></div>
+		<div class="hole hole3"></div>
+		<div class="hole hole4"></div>
+		<div class="hole hole5"></div>
+		<div class="hole hole6"></div>
+		
+	</body>
+</html>
